@@ -9,10 +9,8 @@ import (
 type eventServiceHandler struct{}
 
 type DatabaseHandler interface {
-	AddEvent(Event) ([]byte, error)
-	FindEvent([]byte) (Event, error)
-	FindEventByName(string) (Event, error)
-	FindAllAvailableEvents() ([]Event, error)
+	AddEvent (Event) ([]byte, error)
+	FindEvent ([]byte) (Event, )
 }
 
 func ServeAPII(endpoint string) error {

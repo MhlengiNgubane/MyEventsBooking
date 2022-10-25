@@ -6,15 +6,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-type eventServiceHandler struct{}
-
-type DatabaseHandler interface {
-	AddEvent(Event) ([]byte, error)
-	FindEvent([]byte) (Event, error)
-	FindEventByName(string) (Event, error)
-	FindAllAvailableEvents() ([]Event, error)
-}
-
 func ServeAPII(endpoint string) error {
 	handler := &eventServiceHandler{}
 	r := mux.NewRouter()
@@ -28,6 +19,8 @@ func ServeAPII(endpoint string) error {
 	eventsrouter.Methods("POST").Path("").HandlerFunc(handler.newEventHandler)
 	return http.ListenAndServe(endpoint, r)
 }
+
+
 
 func (eh *eventServiceHandler) findEventHandler(w http.ResponseWriter, r *http.Request) {
 
