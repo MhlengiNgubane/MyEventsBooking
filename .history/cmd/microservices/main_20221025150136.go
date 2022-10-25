@@ -18,8 +18,4 @@ eventsrouter.Methods("POST").Path("").HandlerFunc(handler.newEventHandler)
 
 type eventServiceHandler struct {}
 
-func (eh *eventServiceHandler) findEventHandler(w http.ResponseWriter, r *http.Request) {
-
-}
-
-func (eh *eventServiceHandler) allEventHandler
+func (eh *eventServiceHandler) findEventHandler(w http.ResponseWriter, r *http)

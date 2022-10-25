@@ -1,8 +1,6 @@
 package microservices
 
-import (
-	"net/http"
-
+import(
 	"github.com/gorilla/mux"
 )
 
@@ -16,10 +14,4 @@ eventsrouter.Methods("GET").Path("").HandlerFunc(handler.allEventHandler)
 
 eventsrouter.Methods("POST").Path("").HandlerFunc(handler.newEventHandler)
 
-type eventServiceHandler struct {}
-
-func (eh *eventServiceHandler) findEventHandler(w http.ResponseWriter, r *http.Request) {
-
-}
-
-func (eh *eventServiceHandler) allEventHandler
+type eventServiceHandler

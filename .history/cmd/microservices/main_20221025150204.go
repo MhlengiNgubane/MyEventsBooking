@@ -22,4 +22,3 @@ func (eh *eventServiceHandler) findEventHandler(w http.ResponseWriter, r *http.R
 
 }
 
-func (eh *eventServiceHandler) allEventHandler
