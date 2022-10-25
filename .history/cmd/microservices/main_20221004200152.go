@@ -9,5 +9,3 @@ eventsrouter := r.PathPrefix("/events").Subrouter()
 
 eventsrouter.Methods("GET").Path("/{SearchCriteria}/{search}").
 HandlerFunc(handler.findEventHandler)
-
-eventsrouter.Methods("GET").Path("").Hndler
