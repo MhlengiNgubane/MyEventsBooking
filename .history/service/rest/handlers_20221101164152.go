@@ -89,5 +89,6 @@ func (eh *eventServiceHandler) NewEventHandler(w http.ResponseWriter, r *http.Re
 		fmt.Fprintf(w, `{"error": "error occured while persisting event %d %s"}`, id, err)
 		return
 	}
-	fmt.Fprint(w, `{"id":%d}`, id)
+	x, x1 := fmt.Fprint(w, `{"id":%d}`, id)
+	x, x1
 }
