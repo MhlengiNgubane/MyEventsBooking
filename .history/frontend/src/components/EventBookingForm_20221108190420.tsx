@@ -1,7 +1,9 @@
 import * as React from "react";
 import {ChangeEvent} from "react";
 import {Event} from "../model/Event";
-import {FormRow} from "./FormRow";
+import async (params:type) => {
+	FormRow
+} from "./FormRow";
 
 export interface EventBookingFormProps {
     event: Event;
@@ -46,7 +48,7 @@ export class EventBookingForm extends React.Component<EventBookingFormProps, Eve
                         </select>
                     </FormRow>
                     <FormRow>
-                        <button className="btn btn-primary" onClick={() => this.props.onSubmit(this.state.selectedAmount)}>Submit order</button>
+                            <button className="btn btn-primary" onClick={() => this.props.onSubmit(this.state.selectedAmount)}>Submit order</button>
                     </FormRow>
                 </form>
             </div>

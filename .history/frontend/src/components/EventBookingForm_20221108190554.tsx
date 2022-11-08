@@ -46,7 +46,7 @@ export class EventBookingForm extends React.Component<EventBookingFormProps, Eve
                         </select>
                     </FormRow>
                     <FormRow>
-                        <button className="btn btn-primary" onClick={() => this.props.onSubmit(this.state.selectedAmount)}>Submit order</button>
+                            <button className="btn btn-primary" onClick={() => this.props.onSubmit(this.state.selectedAmount)}>Submit order</button>
                     </FormRow>
                 </form>
             </div>
